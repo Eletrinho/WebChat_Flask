@@ -1,0 +1,34 @@
+* {
+    margin: 0px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: xx-large;
+    box-sizing: border-box;
+}
+
+#mensagens {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 300px;
+    scroll-behavior: auto;
+}
+
+#mensagens span {
+    border-radius: 3px;
+    background-color:darkgray;
+    margin: 3px;
+}
+
+#chat {
+    display: none;
+    flex-direction: column;
+}
+
+#nickForm {
+    background-color: darkgrey;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 2rem;
+    padding: 2rem;
+}

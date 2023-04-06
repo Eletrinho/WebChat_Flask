@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block script %}
+<script src="../static/script.js"></script>
+{% endblock %}
+
+{% block css%}
+<link rel="stylesheet" href="../static/style.css">
+{% endblock %}
+
+{% block content %}
+<div id="entrar">
+    <form id="nickForm">
+    <input type="text" name="" id="nick" placeholder="Digite seu nick">
+    <input type="submit" id="sendnick" value="Entrar" >
+    </form>
+</div>
+
+<div id="chat">
+    <div id="mensagens">
+    </div>
+    
+    <div id="sendmsg">
+        <form action="" id="msgForm">
+            <input id="msg" type="text" placeholder="Digite aqui sua mensagem" required>
+            <input id="sendmsgbtn" type="submit" value="enviar">
+        </form>
+    </div>
+</div>
+
+{% endblock %}
