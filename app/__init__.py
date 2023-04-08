@@ -8,4 +8,4 @@ app.config.from_object('config')
 socketio = SocketIO(app)
 dashboard.bind(app)
 
-from app.controllers import default
+from app.views import default

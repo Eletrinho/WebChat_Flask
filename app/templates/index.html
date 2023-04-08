@@ -11,20 +11,29 @@
 {% block content %}
 <div id="entrar">
     <form id="nickForm">
-    <input type="text" name="" id="nick" placeholder="Digite seu nick">
-    <input type="submit" id="sendnick" value="Entrar" >
+    <input type="text" name="" id="nick" placeholder="Digite seu nick" required>
+    <input type="submit" id="sendnick" value="Entrar">
     </form>
 </div>
 
+<div id="rooms">
+    <input type="button" value="1" onclick="choiceRoom(1)">
+    <input type="button" value="2" onclick="choiceRoom(2)">
+    <input type="button" value="3" onclick="choiceRoom(3)">
+</div>
+
 <div id="chat">
+    <span id="roomNumber"></span>
+
     <div id="mensagens">
     </div>
-    
+
     <div id="sendmsg">
         <form action="" id="msgForm">
             <input id="msg" type="text" placeholder="Digite aqui sua mensagem" required>
             <input id="sendmsgbtn" type="submit" value="enviar">
         </form>
+        <input type="button" value="Mudar de sala" onclick="leaveRoom()">
     </div>
 </div>
 

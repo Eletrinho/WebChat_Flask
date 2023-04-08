@@ -32,3 +32,12 @@
     margin: 2rem;
     padding: 2rem;
 }
+
+#rooms {
+    background-color: darkgrey;
+    display: none;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 2rem;
+    padding: 2rem;
+}

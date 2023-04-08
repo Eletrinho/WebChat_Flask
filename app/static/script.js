@@ -1,5 +1,6 @@
 var socket = io();
-var username = ''
+var username;
+var room;
 
 var nickForm = document.querySelector('#nickForm');
 nickForm.addEventListener('submit', function(e){
@@ -9,15 +10,17 @@ nickForm.addEventListener('submit', function(e){
 
 function sendNick() {
     var nick = document.querySelector("#nick")
-    
-    if(nick.value == ''){
-        document.querySelector('#warn').innerHTML = 'Digite um nick primeiro'
-        document.querySelector('#warn').style.backgroundColor = 'red'
-    } else {
-        username = document.querySelector("#nick").value
-        document.querySelector("#entrar").style.display = "none"
-        document.querySelector("#chat").style.display = "flex"
-    }
+    username = document.querySelector("#nick").value
+    document.querySelector("#entrar").style.display = "none"
+    document.querySelector("#rooms").style.display = "flex"
+}
+
+function choiceRoom(roomId) {
+    room = roomId
+    socket.emit('join', {username: username, room: roomId})
+    document.querySelector("#rooms").style.display = "none"
+    document.querySelector("#chat").style.display = "flex"
+    document.querySelector('#roomNumber').innerHTML = `Sala ${room}`
 }
 
 var msgForm = document.querySelector('#msgForm');
@@ -28,13 +31,16 @@ msgForm.addEventListener('submit', function(e){
 
 function enviarmsg(){
     var msg = document.querySelector("#msg")
-    socket.emit('sendMsg', {user: username, mensagem: msg.value})
+    socket.emit('sendMsg', {user: username, mensagem: msg.value, room: room})
     msg.value = ''
-    document.querySelector('#warn').innerHTML = ''
 }
 
+socket.on('message', (data) => {
+    console.log(data)
+})
+
 socket.on('connect', function() {
-    socket.emit('my event', {data: 'I\'m connected!'});
+    socket.send({data: 'A new user as been connected.'});
 });
 
 socket.on('recieve msg', function(mensagem) {
