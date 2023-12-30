@@ -1,7 +1,7 @@
 
 # WebChat Flask
 
-Desenvolvimento de um aplicativo de chat em tempo real utilizando Flask, uma estrutura de aplicativo da web em Python. O projeto visa proporcionar uma experiência de comunicação instantânea e colaborativa entre usuários, oferecendo salas de chat públicas.
+Desenvolvimento de um site de chat em tempo real utilizando Flask, uma estrutura de aplicativo da web em Python. O projeto visa proporcionar uma experiência de comunicação instantânea e colaborativa entre usuários, oferecendo salas de chat públicas.
 
 
 ## Tecnologias utilizada
