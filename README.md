@@ -12,9 +12,9 @@ Desenvolvimento de um site de chat em tempo real utilizando Flask, uma estrutura
 
 ## Melhorias a serem feitas
 
-- Melhorar o design
-- Utilizar algum banco de dados para salvar as mensagens, pois atualmente só da para ver as mensagens se estiver na página na hora, caso recarregue a página, as mensagens sumirão.
-- Criar salas privadas
+- Melhoria do design e usabilidade.
+- Implementação de salas privadas.
+- Utilização de um banco de dados para armazenamento persistente de mensagens.
 
 
 ## Rodando localmente
